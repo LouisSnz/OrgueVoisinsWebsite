@@ -59,7 +59,7 @@ export default function ActualitesPage() {
     <div className="pt-24 pb-16">
       {/* Hero Section */}
       <section className="py-16 px-4 gradient-warm">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <motion.h1
             className="text-5xl md:text-6xl font-serif font-bold mb-6 text-accent-blue"
             initial={{ opacity: 0, y: -20 }}

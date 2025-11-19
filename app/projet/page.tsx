@@ -10,7 +10,7 @@ export default function ProjetPage() {
     <div className="pt-24 pb-16">
       {/* Hero Section */}
       <section className="py-16 px-4 gradient-warm">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <motion.h1
             className="text-5xl md:text-6xl font-serif font-bold mb-6 text-accent-blue"
             initial={{ opacity: 0, y: -20 }}
@@ -31,12 +31,12 @@ export default function ProjetPage() {
 
       {/* Overview */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="card">
             <h2 className="text-3xl font-serif font-bold mb-6 text-accent-blue">
               Un Instrument Unique
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p className="text-lg">
                 Après une étude approfondie, l&apos;association a confié la réalisation de l&apos;orgue
                 à la <strong>Manufacture PESCE Frères et Fils</strong>, établie à Pau dans les
@@ -196,7 +196,7 @@ export default function ProjetPage() {
                   L&apos;Avant-Projet : Vision et Inspiration
                 </h2>
 
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                   <p className="text-lg">
                     Concevoir un orgue dans une église nouvellement construite représente une
                     opportunité rare et passionnante. Il s&apos;agit d&apos;interpréter l&apos;esprit
@@ -275,7 +275,7 @@ export default function ProjetPage() {
                   PESCE Frères et Fils
                 </h2>
 
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                   <div className="flex items-center justify-center mb-6">
                     <div className="bg-gradient-brown text-white rounded-full w-32 h-32 flex items-center justify-center text-6xl">
                       🏭

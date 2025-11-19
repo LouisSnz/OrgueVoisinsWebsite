@@ -7,7 +7,7 @@ export default function AssociationPage() {
     <div className="pt-24 pb-16">
       {/* Hero Section */}
       <section className="py-16 px-4 gradient-warm">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <motion.h1
             className="text-5xl md:text-6xl font-serif font-bold mb-6 text-accent-blue"
             initial={{ opacity: 0, y: -20 }}
@@ -28,7 +28,7 @@ export default function AssociationPage() {
 
       {/* Mission Statement */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             className="glass-strong rounded-2xl p-8 md:p-12"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -38,11 +38,11 @@ export default function AssociationPage() {
             <h2 className="text-4xl font-serif font-bold mb-6 text-accent-blue text-center">
               Notre Mission
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <p className="text-lg text-gray-700 leading-relaxed text-lg mb-4">
               L&apos;association &quot;Les Amis de l&apos;Orgue&quot; a pour mission de soutenir la construction
               d&apos;un orgue exceptionnel à l&apos;Église Saint-Joseph-le-Bienveillant de Voisins-le-Bretonneux.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-lg">
               Nous nous engageons à promouvoir la musique sacrée et le patrimoine culturel, tout en
               créant un lieu de rencontre et d&apos;échange autour de l&apos;art de l&apos;orgue.
             </p>
@@ -52,11 +52,11 @@ export default function AssociationPage() {
 
       {/* History & Story */}
       <section className="py-16 px-4 bg-cream">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-serif font-bold mb-8 text-accent-blue">
             Notre Histoire
           </h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
             <p className="text-lg">
               L&apos;association est née de l&apos;opportunité exceptionnelle offerte par la construction
               d&apos;une nouvelle église à Voisins-le-Bretonneux. L&apos;Église Saint-Joseph-le-Bienveillant,
@@ -161,7 +161,7 @@ export default function AssociationPage() {
 
       {/* The Team */}
       <section className="py-16 px-4 bg-cream">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-serif font-bold mb-8 text-accent-blue text-center">
             L&apos;Équipe
           </h2>
@@ -206,7 +206,7 @@ export default function AssociationPage() {
 
       {/* The Church */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-serif font-bold mb-8 text-accent-blue text-center">
             L&apos;Église Saint-Joseph-le-Bienveillant
           </h2>
@@ -214,7 +214,7 @@ export default function AssociationPage() {
             <div className="bg-wood-light h-64 rounded-lg mb-6 flex items-center justify-center text-white text-6xl">
               ⛪
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p className="text-lg">
                 L&apos;Église Saint-Joseph-le-Bienveillant est un édifice moderne et lumineux,
                 inauguré récemment à Voisins-le-Bretonneux. Son architecture contemporaine

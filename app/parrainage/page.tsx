@@ -59,7 +59,7 @@ export default function ParrainagePage() {
             backgroundImage: 'linear-gradient(rgba(212,165,116,0.3), rgba(200,168,130,0.3))',
           }}
         />
-        <div className="relative z-10 container mx-auto max-w-4xl text-center">
+        <div className="relative z-10 container mx-auto max-w-6xl text-center">
           <motion.h1
             className="text-5xl md:text-6xl font-serif font-bold mb-6 text-accent-blue"
             initial={{ opacity: 0, y: -20 }}
@@ -256,7 +256,7 @@ export default function ParrainagePage() {
 
       {/* Personalization */}
       <section className="py-16 px-4 bg-gradient-warm">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="card">
             <h2 className="text-3xl font-serif font-bold mb-6 text-accent-blue text-center">
               Personnalisez votre parrainage

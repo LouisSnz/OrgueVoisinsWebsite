@@ -14,7 +14,7 @@ export default function SoutenirPage() {
     <div className="pt-24 pb-16">
       {/* Hero Section */}
       <section className="py-16 px-4 gradient-warm">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <motion.h1
             className="text-5xl md:text-6xl font-serif font-bold mb-6 text-accent-blue"
             initial={{ opacity: 0, y: -20 }}
@@ -35,7 +35,7 @@ export default function SoutenirPage() {
 
       {/* Impact Statement */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             className="glass-strong rounded-2xl p-8 md:p-12"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -45,12 +45,12 @@ export default function SoutenirPage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-accent-blue text-center">
               L&apos;instrument doit être à l&apos;échelle du lieu et de ses ambitions
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <p className="text-lg text-gray-700 leading-relaxed text-lg mb-4">
               L&apos;Église Saint-Joseph-le-Bienveillant, avec sa capacité de plus de 800 personnes
               et son acoustique étudiée, mérite un orgue d&apos;exception. Ce projet représente un
               investissement important pour créer un patrimoine culturel durable.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-lg">
               Chaque contribution, quelle que soit sa taille, nous rapproche de notre objectif
               et permet de concrétiser ce rêve musical et culturel.
             </p>
@@ -60,7 +60,7 @@ export default function SoutenirPage() {
 
       {/* Current Progress */}
       <section className="py-16 px-4 bg-cream">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-serif font-bold mb-8 text-accent-blue text-center">
             Notre Progression
           </h2>
@@ -254,7 +254,7 @@ export default function SoutenirPage() {
 
       {/* FAQ */}
       <section className="py-16 px-4 bg-cream">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-serif font-bold mb-8 text-accent-blue text-center">
             Questions fréquentes
           </h2>
@@ -285,7 +285,7 @@ export default function SoutenirPage() {
                 <summary className="cursor-pointer font-semibold text-lg text-accent-blue hover:text-accent-burgundy transition-colors">
                   {faq.question}
                 </summary>
-                <p className="mt-4 text-gray-700 leading-relaxed">
+                <p className="mt-4 text-gray-700 leading-relaxed text-lg">
                   {faq.answer}
                 </p>
               </details>

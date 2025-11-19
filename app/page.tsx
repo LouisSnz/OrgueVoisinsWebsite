@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* Donation Progress */}
       <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             className="glass-strong rounded-2xl p-8 md:p-12"
             initial={{ opacity: 0, scale: 0.95 }}
