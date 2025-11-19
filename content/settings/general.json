@@ -1,0 +1,16 @@
+{
+  "siteName": "Les Amis de l'Orgue de Voisins-le-Bretonneux",
+  "contactEmail": "contact@orgue-voisins.fr",
+  "president": "Olivier Sansoz",
+  "address": "Église Saint-Joseph-le-Bienveillant\nVoisins-le-Bretonneux\nYvelines (78)",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": ""
+  },
+  "donations": {
+    "collected": 23310,
+    "goal": 0,
+    "showGoal": false
+  }
+}
