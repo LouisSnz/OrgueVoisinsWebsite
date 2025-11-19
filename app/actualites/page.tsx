@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Hammer, Construction, CheckCircle, Target, Music, Pencil } from 'lucide-react';
 
 export default function ActualitesPage() {
   const articles = [
@@ -10,7 +11,7 @@ export default function ActualitesPage() {
       title: 'Construction en cours chez PESCE Frères',
       date: 'Décembre 2024',
       excerpt: 'Découvrez les dernières avancées de la construction de notre orgue dans les ateliers de Pau. Les tuyaux prennent forme et la console est en cours de finition.',
-      icon: '🔨',
+      Icon: Hammer,
       color: 'bg-wood-light'
     },
     {
@@ -18,7 +19,7 @@ export default function ActualitesPage() {
       title: 'Visite de l\'atelier PESCE',
       date: 'Septembre 2024',
       excerpt: 'Notre équipe a eu le privilège de visiter les ateliers de la manufacture PESCE Frères à Pau pour suivre l\'avancement de la fabrication de notre orgue.',
-      icon: '🏗️',
+      Icon: Construction,
       color: 'bg-wood'
     },
     {
@@ -26,7 +27,7 @@ export default function ActualitesPage() {
       title: 'Choix du fabricant PESCE Frères',
       date: '2023',
       excerpt: 'Après une étude approfondie et plusieurs consultations, nous avons choisi la manufacture PESCE Frères et Fils pour réaliser notre orgue exceptionnel.',
-      icon: '✅',
+      Icon: CheckCircle,
       color: 'bg-accent-blue'
     },
     {
@@ -34,7 +35,7 @@ export default function ActualitesPage() {
       title: 'Lancement du projet',
       date: '2022',
       excerpt: 'L\'association Les Amis de l\'Orgue est officiellement créée avec pour mission de soutenir la construction d\'un orgue à l\'Église Saint-Joseph-le-Bienveillant.',
-      icon: '🎯',
+      Icon: Target,
       color: 'bg-accent-burgundy'
     },
     {
@@ -42,7 +43,7 @@ export default function ActualitesPage() {
       title: 'Étude acoustique de l\'église',
       date: '2022',
       excerpt: 'Une étude acoustique approfondie de l\'église Saint-Joseph-le-Bienveillant confirme l\'excellence des conditions pour accueillir un grand orgue.',
-      icon: '🎵',
+      Icon: Music,
       color: 'bg-wood-dark'
     },
     {
@@ -50,7 +51,7 @@ export default function ActualitesPage() {
       title: 'Premières esquisses du Père Valentin',
       date: '2021',
       excerpt: 'Le Père Paul Valentin CSC réalise les premières esquisses artistiques de l\'orgue, posant les bases de la vision esthétique du projet.',
-      icon: '✏️',
+      Icon: Pencil,
       color: 'bg-brown-light'
     },
   ];
@@ -88,8 +89,11 @@ export default function ActualitesPage() {
             viewport={{ once: true }}
           >
             <div className="grid md:grid-cols-2 gap-8">
-              <div className={`${articles[0].color} h-80 rounded-lg flex items-center justify-center text-white text-8xl`}>
-                {articles[0].icon}
+              <div className={`${articles[0].color} h-80 rounded-lg flex items-center justify-center text-white`}>
+                {(() => {
+                  const FeaturedIcon = articles[0].Icon;
+                  return <FeaturedIcon className="w-32 h-32" strokeWidth={1.5} />;
+                })()}
               </div>
               <div className="flex flex-col justify-center">
                 <p className="text-sm text-accent-blue font-semibold mb-2">{articles[0].date}</p>
@@ -127,8 +131,8 @@ export default function ActualitesPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link href={`/actualites/${article.id}`} className="card group h-full flex flex-col">
-                  <div className={`${article.color} h-48 rounded-lg mb-4 flex items-center justify-center text-white text-6xl`}>
-                    {article.icon}
+                  <div className={`${article.color} h-48 rounded-lg mb-4 flex items-center justify-center text-white`}>
+                    <article.Icon className="w-20 h-20" strokeWidth={1.5} />
                   </div>
                   <p className="text-sm text-gray-500 mb-2">{article.date}</p>
                   <h3 className="text-xl font-serif mb-3 group-hover:text-accent-blue transition-colors">

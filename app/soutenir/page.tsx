@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Music, Heart, Users } from 'lucide-react';
 
 export default function SoutenirPage() {
   const [donationAmount, setDonationAmount] = useState<number | ''>('');
@@ -103,7 +104,7 @@ export default function SoutenirPage() {
               transition={{ duration: 0.2 }}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4">🎵</div>
+                <Music className="w-16 h-16 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
                 <h3 className="text-2xl font-serif font-bold text-accent-blue mb-3">
                   Parrainer un tuyau
                 </h3>
@@ -140,7 +141,7 @@ export default function SoutenirPage() {
               transition={{ duration: 0.2 }}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4">💝</div>
+                <Heart className="w-16 h-16 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
                 <h3 className="text-2xl font-serif font-bold text-accent-blue mb-3">
                   Faire un don
                 </h3>
@@ -211,7 +212,7 @@ export default function SoutenirPage() {
               transition={{ duration: 0.2 }}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4">👥</div>
+                <Users className="w-16 h-16 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
                 <h3 className="text-2xl font-serif font-bold text-accent-blue mb-3">
                   Adhérer à l&apos;association
                 </h3>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Music, Music2, BookOpen, Building2, Handshake, Piano, User, Church, Sparkles } from 'lucide-react';
 
 export default function AssociationPage() {
   return (
@@ -91,7 +92,7 @@ export default function AssociationPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">🎼</div>
+              <Music2 className="w-12 h-12 mb-4 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold mb-3">Événements Culturels</h3>
               <p className="text-gray-700">
                 Organiser des concerts, festivals, expositions et conférences pour promouvoir
@@ -105,7 +106,7 @@ export default function AssociationPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">📚</div>
+              <BookOpen className="w-12 h-12 mb-4 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold mb-3">Programmes Éducatifs</h3>
               <p className="text-gray-700">
                 Développer des initiatives pédagogiques pour sensibiliser le public, en particulier
@@ -119,7 +120,7 @@ export default function AssociationPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">🏛️</div>
+              <Building2 className="w-12 h-12 mb-4 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold mb-3">Patrimoine Musical</h3>
               <p className="text-gray-700">
                 Promouvoir le patrimoine musical et la facture d&apos;orgue, en valorisant
@@ -133,7 +134,7 @@ export default function AssociationPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">🤝</div>
+              <Handshake className="w-12 h-12 mb-4 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold mb-3">Engagement Communautaire</h3>
               <p className="text-gray-700">
                 Fédérer la communauté de Voisins-le-Bretonneux et Saint-Quentin-en-Yvelines
@@ -147,7 +148,7 @@ export default function AssociationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">🎹</div>
+              <Piano className="w-12 h-12 mb-4 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold mb-3">Soutien au Projet</h3>
               <p className="text-gray-700">
                 Collecter les fonds nécessaires à l&apos;installation de l&apos;orgue et assurer
@@ -167,8 +168,8 @@ export default function AssociationPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card text-center">
-              <div className="w-24 h-24 bg-gradient-brown rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl">
-                👤
+              <div className="w-24 h-24 bg-gradient-brown rounded-full mx-auto mb-4 flex items-center justify-center text-white">
+                <User className="w-12 h-12" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-serif font-semibold mb-2">Olivier Sansoz</h3>
               <p className="text-accent-blue font-medium mb-3">Président</p>
@@ -179,8 +180,8 @@ export default function AssociationPage() {
             </div>
 
             <div className="card text-center">
-              <div className="w-24 h-24 bg-gradient-brown rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl">
-                👤
+              <div className="w-24 h-24 bg-gradient-brown rounded-full mx-auto mb-4 flex items-center justify-center text-white">
+                <User className="w-12 h-12" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-serif font-semibold mb-2">Équipe de bénévoles</h3>
               <p className="text-accent-blue font-medium mb-3">Membres actifs</p>
@@ -211,8 +212,8 @@ export default function AssociationPage() {
             L&apos;Église Saint-Joseph-le-Bienveillant
           </h2>
           <div className="card">
-            <div className="bg-wood-light h-64 rounded-lg mb-6 flex items-center justify-center text-white text-6xl">
-              ⛪
+            <div className="bg-wood-light h-64 rounded-lg mb-6 flex items-center justify-center text-white">
+              <Church className="w-32 h-32" strokeWidth={1.5} />
             </div>
             <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
               <p className="text-lg">
@@ -226,11 +227,11 @@ export default function AssociationPage() {
                   <div className="text-sm text-gray-600">Places assises</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-warm rounded-lg">
-                  <div className="text-3xl font-bold text-accent-blue mb-1">✨</div>
+                  <Sparkles className="w-10 h-10 text-accent-blue mb-1 mx-auto" strokeWidth={1.5} />
                   <div className="text-sm text-gray-600">Architecture moderne</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-warm rounded-lg">
-                  <div className="text-3xl font-bold text-accent-blue mb-1">🎵</div>
+                  <Music className="w-10 h-10 text-accent-blue mb-1 mx-auto" strokeWidth={1.5} />
                   <div className="text-sm text-gray-600">Acoustique étudiée</div>
                 </div>
               </div>

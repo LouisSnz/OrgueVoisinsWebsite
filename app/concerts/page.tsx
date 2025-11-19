@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { MapPin, Clock, Ticket, Car, Mail } from 'lucide-react';
 
 export default function ConcertsPage() {
   const upcomingEvents = [
@@ -105,11 +106,11 @@ export default function ConcertsPage() {
                     </h3>
                     <div className="space-y-2 mb-4">
                       <p className="text-gray-600 flex items-center">
-                        <span className="mr-2">📍</span>
+                        <MapPin className="w-4 h-4 mr-2" />
                         {event.location}
                       </p>
                       <p className="text-gray-600 flex items-center">
-                        <span className="mr-2">🕐</span>
+                        <Clock className="w-4 h-4 mr-2" />
                         {event.time}
                       </p>
                     </div>
@@ -141,12 +142,16 @@ export default function ConcertsPage() {
             </h3>
             <div className="space-y-4 text-gray-700">
               <div>
-                <h4 className="font-semibold mb-2">📍 Lieu</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <MapPin className="w-5 h-5 mr-2" /> Lieu
+                </h4>
                 <p>Église Saint-Joseph-le-Bienveillant</p>
                 <p>Voisins-le-Bretonneux, Yvelines (78)</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">🎫 Entrée</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <Ticket className="w-5 h-5 mr-2" /> Entrée
+                </h4>
                 <p>
                   La plupart de nos concerts sont à entrée libre, avec participation
                   libre au profit de l&apos;association. Certains événements peuvent
@@ -154,12 +159,16 @@ export default function ConcertsPage() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">🚗 Accès & Parking</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <Car className="w-5 h-5 mr-2" /> Accès & Parking
+                </h4>
                 <p>Parking disponible à proximité de l&apos;église.</p>
                 <p>Accès en transport en commun : Bus et RER à proximité.</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">📧 Contact</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <Mail className="w-5 h-5 mr-2" /> Contact
+                </h4>
                 <p>
                   Pour plus d&apos;informations :{' '}
                   <a href="mailto:contact@orgue-voisins.fr" className="text-accent-blue hover:underline">

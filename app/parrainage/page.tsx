@@ -2,49 +2,50 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Music, Music2, Music3, Piano, Keyboard, Sliders, Building2, ScrollText, Star, Ruler } from 'lucide-react';
 
 export default function ParrainagePage() {
   const components = [
     {
       name: 'Petits tuyaux',
       description: 'Quelques centimètres de longueur',
-      icon: '🎵',
+      Icon: Music,
       priceRange: 'À partir de 50€'
     },
     {
       name: 'Tuyaux moyens',
       description: 'Jusqu\'à 2,5 mètres',
-      icon: '🎶',
+      Icon: Music2,
       priceRange: 'À partir de 150€'
     },
     {
       name: 'Grands tuyaux',
       description: '5 mètres et plus',
-      icon: '🎼',
+      Icon: Music3,
       priceRange: 'À partir de 500€'
     },
     {
       name: 'Série de tuyaux',
       description: 'Un ensemble complet',
-      icon: '🎹',
+      Icon: Piano,
       priceRange: 'À partir de 1000€'
     },
     {
       name: 'Claviers',
       description: 'Grand Orgue, Positif ou Récit (3 disponibles)',
-      icon: '⌨️',
+      Icon: Keyboard,
       priceRange: 'Sur demande'
     },
     {
       name: 'Console',
       description: 'Poste de commande central',
-      icon: '🎚️',
+      Icon: Sliders,
       priceRange: 'Sur demande'
     },
     {
       name: 'Buffet magnifique',
       description: 'Magnifique buffet en chêne (pièce unique)',
-      icon: '🏛️',
+      Icon: Building2,
       priceRange: 'Sur demande'
     },
   ];
@@ -181,7 +182,7 @@ export default function ParrainagePage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="text-5xl mb-4">{component.icon}</div>
+                <component.Icon className="w-14 h-14 mb-4 mx-auto text-accent-blue" strokeWidth={1.5} />
                 <h3 className="text-xl font-serif font-bold mb-2 text-accent-blue">
                   {component.name}
                 </h3>
@@ -208,7 +209,7 @@ export default function ParrainagePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">📜</div>
+              <ScrollText className="w-12 h-12 mb-4 mx-auto text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-2xl font-serif font-bold mb-3 text-accent-blue">
                 Parrainage Libre
               </h3>
@@ -232,7 +233,7 @@ export default function ParrainagePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl mb-4">⭐</div>
+              <Star className="w-12 h-12 mb-4 mx-auto text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-2xl font-serif font-bold mb-3 text-accent-blue">
                 Parrainage Nominatif
               </h3>
@@ -263,8 +264,8 @@ export default function ParrainagePage() {
             </h2>
             <div className="space-y-6 text-gray-700">
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy">
-                  🎼 Choisissez votre note
+                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy flex items-center">
+                  <Music3 className="w-5 h-5 mr-2 inline" strokeWidth={1.5} /> Choisissez votre note
                 </h4>
                 <p>
                   Pour les tuyaux, vous pouvez choisir votre note préférée parmi les 12 notes
@@ -274,8 +275,8 @@ export default function ParrainagePage() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy">
-                  📏 Longueur et timbre
+                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy flex items-center">
+                  <Ruler className="w-5 h-5 mr-2 inline" strokeWidth={1.5} /> Longueur et timbre
                 </h4>
                 <p>
                   Choisissez la longueur de votre tuyau ou son timbre particulier. Consultez-nous
@@ -285,8 +286,8 @@ export default function ParrainagePage() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy">
-                  ⌨️ Claviers disponibles
+                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy flex items-center">
+                  <Keyboard className="w-5 h-5 mr-2 inline" strokeWidth={1.5} /> Claviers disponibles
                 </h4>
                 <p>
                   Trois claviers manuels peuvent être parrainés individuellement :
@@ -296,8 +297,8 @@ export default function ParrainagePage() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy">
-                  🏛️ Buffet unique
+                <h4 className="text-xl font-semibold mb-2 text-accent-burgundy flex items-center">
+                  <Building2 className="w-5 h-5 mr-2 inline" strokeWidth={1.5} /> Buffet unique
                 </h4>
                 <p>
                   Le magnifique buffet en chêne massif est une pièce unique qui peut être

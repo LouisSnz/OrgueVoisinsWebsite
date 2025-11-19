@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Music, Sparkles, Theater, TrendingUp, Calendar, Mail, Users, Heart, MapPin } from 'lucide-react';
 
 export default function Home() {
   const fadeInUp = {
@@ -14,10 +16,15 @@ export default function Home() {
     <div className="pt-24">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with gradient overlay */}
-        <div
-          className="absolute inset-0 z-0 gradient-brown opacity-90"
+        {/* Background image with gradient overlay */}
+        <Image
+          src="/images/orgue_vue_tuyaux-1-1.jpg"
+          alt="Tuyaux d'orgue"
+          fill
+          className="object-cover"
+          priority
         />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brown/90 to-wood-dark/85" />
 
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-wood-light/20 rounded-full blur-3xl" />
@@ -100,7 +107,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="text-accent-blue text-5xl mb-6">🎵</div>
+              <Music className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">L&apos;Orgue</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
                 Un instrument contemporain avec 1071 tuyaux, 41 registres et 3 claviers manuels.
@@ -116,7 +123,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <div className="text-accent-blue text-5xl mb-6">✨</div>
+              <Sparkles className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">La Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
                 Créer un orgue unique qui honore la tradition tout en embrassant l&apos;innovation.
@@ -132,7 +139,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <div className="text-accent-blue text-5xl mb-6">🎭</div>
+              <Theater className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">L&apos;Impact</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
                 Enrichir la vie culturelle de Voisins-le-Bretonneux par des concerts, festivals et
@@ -200,8 +207,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* News Article 1 */}
             <Link href="/actualites/construction-decembre-2024" className="card group">
-              <div className="bg-wood-light h-48 rounded-lg mb-4 flex items-center justify-center text-white text-6xl">
-                🔨
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src="/images/Bois-_1494.jpg"
+                  alt="Construction chez PESCE Frères"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <p className="text-sm text-gray-500 mb-2">Décembre 2024</p>
               <h3 className="text-xl font-serif mb-2 group-hover:text-accent-blue transition-colors">
@@ -214,8 +226,13 @@ export default function Home() {
 
             {/* News Article 2 */}
             <Link href="/actualites/visite-atelier-septembre-2024" className="card group">
-              <div className="bg-wood h-48 rounded-lg mb-4 flex items-center justify-center text-white text-6xl">
-                🏗️
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src="/images/PHOTO-2023-10-20-10-30-34-10.jpg"
+                  alt="Visite de l'atelier PESCE"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <p className="text-sm text-gray-500 mb-2">Septembre 2024</p>
               <h3 className="text-xl font-serif mb-2 group-hover:text-accent-blue transition-colors">
@@ -228,8 +245,13 @@ export default function Home() {
 
             {/* News Article 3 */}
             <Link href="/actualites/choix-fabricant" className="card group">
-              <div className="bg-accent-blue h-48 rounded-lg mb-4 flex items-center justify-center text-white text-6xl">
-                ✅
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src="/images/3D1.jpg"
+                  alt="Rendu 3D de l'orgue"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <p className="text-sm text-gray-500 mb-2">2023</p>
               <h3 className="text-xl font-serif mb-2 group-hover:text-accent-blue transition-colors">
@@ -262,7 +284,9 @@ export default function Home() {
                 <div className="text-sm">JUIN 2025</div>
               </div>
               <h3 className="text-xl font-serif mb-2">Concert de l&apos;Orchestre de l&apos;académie de Versailles</h3>
-              <p className="text-gray-600 text-sm mb-2">📍 Église Saint-Joseph le Bienveillant</p>
+              <p className="text-gray-600 text-sm mb-2 flex items-center">
+                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
+              </p>
               <p className="text-gray-700">
                 Un concert exceptionnel avec l&apos;orchestre de l&apos;académie de Versailles.
               </p>
@@ -275,7 +299,9 @@ export default function Home() {
                 <div className="text-sm">FÉV 2025</div>
               </div>
               <h3 className="text-xl font-serif mb-2">Les Petits Chanteurs de la Croix du Bois</h3>
-              <p className="text-gray-600 text-sm mb-2">📍 Église Saint-Joseph le Bienveillant</p>
+              <p className="text-gray-600 text-sm mb-2 flex items-center">
+                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
+              </p>
               <p className="text-gray-700">
                 Concert des célèbres Petits Chanteurs de la Croix du Bois.
               </p>
@@ -288,7 +314,9 @@ export default function Home() {
                 <div className="text-sm">JAN 2025</div>
               </div>
               <h3 className="text-xl font-serif mb-2">Choeurs Cadences et Viva Voce</h3>
-              <p className="text-gray-600 text-sm mb-2">📍 Église Saint-Joseph le Bienveillant</p>
+              <p className="text-gray-600 text-sm mb-2 flex items-center">
+                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
+              </p>
               <p className="text-gray-700">
                 Concert avec les choeurs Cadences et Viva Voce.
               </p>
@@ -325,7 +353,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="text-7xl mb-6">🎵</div>
+              <Music className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">Parrainer un tuyau</h3>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                 Devenez propriétaire d&apos;une partie de l&apos;orgue en parrainant un tuyau,
@@ -344,7 +372,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <div className="text-7xl mb-6">💝</div>
+              <Heart className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">Faire un don</h3>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                 Soutenez le projet avec un don libre. Chaque contribution compte et
@@ -363,7 +391,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <div className="text-7xl mb-6">👥</div>
+              <Users className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
               <h3 className="text-3xl font-serif mb-4 text-accent-blue">Adhérer à l&apos;association</h3>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                 Rejoignez notre communauté et participez activement à la vie de
