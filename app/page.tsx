@@ -16,39 +16,63 @@ export default function Home() {
     <div className="pt-24">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image with gradient overlay */}
+        {/* Background image with refined gradient overlay */}
         <Image
-          src="/images/orgue_vue_tuyaux-1-1.jpg"
-          alt="Tuyaux d'orgue"
+          src="/images/orgue_vue_01-2.jpg"
+          alt="Grand orgue de l'Église Saint-Joseph-le-Bienveillant"
           fill
           className="object-cover"
           priority
+          quality={95}
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brown/90 to-wood-dark/85" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brown/80 via-wood-dark/75 to-brown/85" />
 
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-wood-light/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-burgundy/20 rounded-full blur-3xl" />
+        {/* Refined decorative elements */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-wood-light/15 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-burgundy/15 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s'}} />
 
         <div className="relative z-10 text-center text-white px-6 max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="glass-strong rounded-3xl p-12 md:p-16">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-tight">
+          <motion.div
+            {...fadeInUp}
+            className="backdrop-blur-md bg-white/15 rounded-3xl p-12 md:p-16 shadow-2xl border border-white/20"
+          >
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Un orgue exceptionnel pour Voisins-le-Bretonneux
-            </h1>
-            <p className="text-xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed">
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Soutenez la création d&apos;un instrument unique à l&apos;Église Saint-Joseph-le-Bienveillant
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/projet" className="btn-primary text-lg px-10 py-4">
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Link href="/projet" className="btn-primary text-lg px-10 py-4 hover:scale-105 transition-transform">
                 Découvrir le projet
               </Link>
-              <Link href="/soutenir" className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-accent-blue text-lg px-10 py-4">
+              <Link href="/soutenir" className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-accent-blue text-lg px-10 py-4 hover:scale-105 transition-transform">
                 Nous soutenir
               </Link>
-            </div>
+            </motion.div>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/20">
+            <motion.div
+              className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/20"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
               <div>
                 <div className="text-4xl md:text-5xl font-serif font-bold mb-2">1071</div>
                 <div className="text-sm md:text-base opacity-90">Tuyaux</div>
@@ -61,7 +85,7 @@ export default function Home() {
                 <div className="text-4xl md:text-5xl font-serif font-bold mb-2">3</div>
                 <div className="text-sm md:text-base opacity-90">Claviers</div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 

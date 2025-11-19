@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Navigation() {
@@ -37,8 +38,17 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-serif font-bold text-accent-blue">
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="relative w-12 h-12">
+              <Image
+                src="/images/LOGO_AMIS_ORGUE_NOIR.png"
+                alt="Les Amis de l'Orgue"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="text-xl md:text-2xl font-serif font-bold text-accent-blue hidden sm:block">
               Les Amis de l&apos;Orgue
             </div>
           </Link>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Les Amis de l&apos;Orgue</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="relative w-10 h-10 bg-white rounded-lg p-1">
+                <Image
+                  src="/images/LOGO_AMIS_ORGUE_NOIR.png"
+                  alt="Les Amis de l'Orgue"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-serif font-bold">Les Amis de l&apos;Orgue</h3>
+            </div>
             <p className="text-sm opacity-90">
-              Supporting the organ at Église Saint-Joseph-le-Bienveillant in Voisins-le-Bretonneux
+              Soutenir l&apos;orgue de l&apos;Église Saint-Joseph-le-Bienveillant à Voisins-le-Bretonneux
             </p>
           </div>
 
@@ -96,12 +107,15 @@ export default function Footer() {
           <p className="text-sm opacity-75">
             © {currentYear} Orgue de Voisins le Bretonneux
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-sm hover:text-wood-light transition-colors">
+          <div className="flex flex-wrap gap-4 md:gap-6 mt-4 md:mt-0 justify-center md:justify-end">
+            <Link href="/mentions-legales" className="text-sm hover:text-wood-light transition-colors">
+              Mentions légales
+            </Link>
+            <Link href="/politique-confidentialite" className="text-sm hover:text-wood-light transition-colors">
               Politique de confidentialité
             </Link>
-            <Link href="/terms" className="text-sm hover:text-wood-light transition-colors">
-              Conditions d&apos;utilisation
+            <Link href="/cgu" className="text-sm hover:text-wood-light transition-colors">
+              CGU
             </Link>
           </div>
         </div>
