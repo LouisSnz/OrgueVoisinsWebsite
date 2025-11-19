@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Palette, Pencil, Factory, Calendar, Hammer, Sparkles, Target, Wrench, Piano, Music, Camera } from 'lucide-react';
 
 export default function ProjetPage() {
   const [activeTab, setActiveTab] = useState('specifications');
@@ -254,11 +255,11 @@ export default function ProjetPage() {
                       Galerie des Esquisses
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-wood-light h-64 rounded-lg flex items-center justify-center text-white text-4xl">
-                        🎨
+                      <div className="bg-wood-light h-64 rounded-lg flex items-center justify-center text-white">
+                        <Palette className="w-20 h-20" strokeWidth={1.5} />
                       </div>
-                      <div className="bg-wood h-64 rounded-lg flex items-center justify-center text-white text-4xl">
-                        ✏️
+                      <div className="bg-wood h-64 rounded-lg flex items-center justify-center text-white">
+                        <Pencil className="w-20 h-20" strokeWidth={1.5} />
                       </div>
                     </div>
                     <p className="text-sm text-gray-500 mt-4 italic">
@@ -277,8 +278,8 @@ export default function ProjetPage() {
 
                 <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                   <div className="flex items-center justify-center mb-6">
-                    <div className="bg-gradient-brown text-white rounded-full w-32 h-32 flex items-center justify-center text-6xl">
-                      🏭
+                    <div className="bg-gradient-brown text-white rounded-full w-32 h-32 flex items-center justify-center">
+                      <Factory className="w-16 h-16" strokeWidth={1.5} />
                     </div>
                   </div>
 
@@ -290,19 +291,27 @@ export default function ProjetPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                     <div className="gradient-warm p-6 rounded-lg">
-                      <h4 className="text-xl font-semibold mb-2 text-accent-blue">📅 Depuis 1949</h4>
+                      <h4 className="text-xl font-semibold mb-2 text-accent-blue flex items-center">
+                        <Calendar className="w-5 h-5 mr-2" strokeWidth={1.5} /> Depuis 1949
+                      </h4>
                       <p>Plus de 70 ans d&apos;expérience et de savoir-faire</p>
                     </div>
                     <div className="gradient-warm p-6 rounded-lg">
-                      <h4 className="text-xl font-semibold mb-2 text-accent-blue">🔨 Expertise</h4>
+                      <h4 className="text-xl font-semibold mb-2 text-accent-blue flex items-center">
+                        <Hammer className="w-5 h-5 mr-2" strokeWidth={1.5} /> Expertise
+                      </h4>
                       <p>Restauration et construction d&apos;orgues neufs</p>
                     </div>
                     <div className="gradient-warm p-6 rounded-lg">
-                      <h4 className="text-xl font-semibold mb-2 text-accent-blue">✨ Innovation</h4>
+                      <h4 className="text-xl font-semibold mb-2 text-accent-blue flex items-center">
+                        <Sparkles className="w-5 h-5 mr-2" strokeWidth={1.5} /> Innovation
+                      </h4>
                       <p>Projets originaux et innovants</p>
                     </div>
                     <div className="gradient-warm p-6 rounded-lg">
-                      <h4 className="text-xl font-semibold mb-2 text-accent-blue">🎯 Qualité</h4>
+                      <h4 className="text-xl font-semibold mb-2 text-accent-blue flex items-center">
+                        <Target className="w-5 h-5 mr-2" strokeWidth={1.5} /> Qualité
+                      </h4>
                       <p>Artisanat d&apos;excellence et tradition</p>
                     </div>
                   </div>
@@ -343,14 +352,14 @@ export default function ProjetPage() {
                       L&apos;Atelier
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-wood-light h-48 rounded-lg flex items-center justify-center text-white text-4xl">
-                        🔧
+                      <div className="bg-wood-light h-48 rounded-lg flex items-center justify-center text-white">
+                        <Wrench className="w-16 h-16" strokeWidth={1.5} />
                       </div>
-                      <div className="bg-wood h-48 rounded-lg flex items-center justify-center text-white text-4xl">
-                        🎹
+                      <div className="bg-wood h-48 rounded-lg flex items-center justify-center text-white">
+                        <Piano className="w-16 h-16" strokeWidth={1.5} />
                       </div>
-                      <div className="bg-wood-dark h-48 rounded-lg flex items-center justify-center text-white text-4xl">
-                        🎵
+                      <div className="bg-wood-dark h-48 rounded-lg flex items-center justify-center text-white">
+                        <Music className="w-16 h-16" strokeWidth={1.5} />
                       </div>
                     </div>
                     <p className="text-sm text-gray-500 mt-4 italic">
@@ -374,9 +383,9 @@ export default function ProjetPage() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="bg-gradient-brown h-64 rounded-lg hover:scale-105 transition-transform cursor-pointer flex items-center justify-center text-white text-5xl"
+                className="bg-gradient-brown h-64 rounded-lg hover:scale-105 transition-transform cursor-pointer flex items-center justify-center text-white"
               >
-                📸
+                <Camera className="w-20 h-20" strokeWidth={1.5} />
               </div>
             ))}
           </div>

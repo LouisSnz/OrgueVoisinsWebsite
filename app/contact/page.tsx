@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { User, Mail, MapPin, Map, Car, Train } from 'lucide-react';
 
 type FormData = {
   name: string;
@@ -66,7 +67,9 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="glass-strong rounded-xl p-6">
                   <div className="flex items-start mb-4">
-                    <div className="text-3xl mr-4">👤</div>
+                    <div className="mr-4">
+                      <User className="w-10 h-10 text-accent-blue" strokeWidth={1.5} />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Contact principal</h3>
                       <p className="text-gray-700">Olivier Sansoz</p>
@@ -77,7 +80,9 @@ export default function ContactPage() {
 
                 <div className="glass-strong rounded-xl p-6">
                   <div className="flex items-start mb-4">
-                    <div className="text-3xl mr-4">📧</div>
+                    <div className="mr-4">
+                      <Mail className="w-10 h-10 text-accent-blue" strokeWidth={1.5} />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Email</h3>
                       <a
@@ -95,7 +100,9 @@ export default function ContactPage() {
 
                 <div className="glass-strong rounded-xl p-6">
                   <div className="flex items-start mb-4">
-                    <div className="text-3xl mr-4">📍</div>
+                    <div className="mr-4">
+                      <MapPin className="w-10 h-10 text-accent-blue" strokeWidth={1.5} />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Adresse</h3>
                       <p className="text-gray-700">Église Saint-Joseph-le-Bienveillant</p>
@@ -263,7 +270,7 @@ export default function ContactPage() {
           <div className="card">
             <div className="aspect-video bg-gradient-brown rounded-lg flex items-center justify-center text-white">
               <div className="text-center">
-                <div className="text-6xl mb-4">🗺️</div>
+                <Map className="w-24 h-24 mx-auto mb-4" strokeWidth={1.5} />
                 <p className="text-xl font-semibold mb-2">Église Saint-Joseph-le-Bienveillant</p>
                 <p className="mb-4">Voisins-le-Bretonneux, Yvelines (78)</p>
                 <a
@@ -278,14 +285,18 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="gradient-warm p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">🚗 En voiture</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <Car className="w-5 h-5 mr-2" strokeWidth={1.5} /> En voiture
+                </h4>
                 <p className="text-sm text-gray-700">
                   Parking disponible à proximité de l&apos;église.
                   Accès facile depuis la N12 et l&apos;A86.
                 </p>
               </div>
               <div className="gradient-warm p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">🚇 Transports en commun</h4>
+                <h4 className="font-semibold mb-2 flex items-center">
+                  <Train className="w-5 h-5 mr-2" strokeWidth={1.5} /> Transports en commun
+                </h4>
                 <p className="text-sm text-gray-700">
                   Bus et RER à proximité. Gare de Saint-Quentin-en-Yvelines accessible.
                 </p>
