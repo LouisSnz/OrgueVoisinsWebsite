@@ -82,7 +82,7 @@ export default function Home() {
             Notre Vision
           </motion.h2>
           <motion.p
-            className="text-xl text-center mb-16 max-w-4xl mx-auto text-gray-700"
+            className="text-xl text-center mb-16 mx-auto text-gray-700"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -311,7 +311,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-serif text-center mb-6 text-accent-blue">
             Comment nous soutenir
           </h2>
-          <p className="text-center text-gray-700 text-xl mb-16 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-center text-gray-700 text-xl mb-16 mx-auto leading-relaxed">
             Votre soutien est essentiel pour réaliser ce projet exceptionnel.
             Découvrez les différentes façons de contribuer.
           </p>
