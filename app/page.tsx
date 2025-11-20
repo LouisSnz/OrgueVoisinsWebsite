@@ -6,17 +6,11 @@ import { motion } from 'framer-motion';
 import { Music, Sparkles, Theater, TrendingUp, Calendar, Mail, Users, Heart, MapPin } from 'lucide-react';
 
 export default function Home() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
   return (
     <div className="pt-24">
-      {/* Hero Section */}
+      {/* Hero Section - Streamlined */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image with refined gradient overlay */}
+        {/* Background image with subtle gradient */}
         <Image
           src="/images/orgue_vue_01-2.jpg"
           alt="Grand orgue de l'Église Saint-Joseph-le-Bienveillant"
@@ -25,196 +19,185 @@ export default function Home() {
           priority
           quality={95}
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-brown/80 via-wood-dark/75 to-brown/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        {/* Refined decorative elements */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-wood-light/15 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-burgundy/15 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s'}} />
-
-        <div className="relative z-10 text-center text-white px-6 max-w-7xl mx-auto">
-          <motion.div
-            {...fadeInUp}
-            className="backdrop-blur-md bg-white/15 rounded-3xl p-12 md:p-16 shadow-2xl border border-white/20"
+        {/* Hero Content - Clean and Simple */}
+        <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Un orgue exceptionnel pour Voisins-le-Bretonneux
-            </motion.h1>
-            <motion.p
-              className="text-xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed font-light"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Soutenez la création d&apos;un instrument unique à l&apos;Église Saint-Joseph-le-Bienveillant
-            </motion.p>
-            <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Link href="/projet" className="btn-primary text-lg px-10 py-4 hover:scale-105 transition-transform">
-                Découvrir le projet
-              </Link>
-              <Link href="/soutenir" className="btn-secondary bg-white/10 border-white text-white hover:bg-white hover:text-accent-blue text-lg px-10 py-4 hover:scale-105 transition-transform">
-                Nous soutenir
-              </Link>
-            </motion.div>
+            Un orgue exceptionnel pour Voisins-le-Bretonneux
+          </motion.h1>
 
-            {/* Quick stats */}
-            <motion.div
-              className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/20"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+          <motion.p
+            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-light opacity-95"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
+            Soutenez la création d&apos;un instrument unique à l&apos;Église Saint-Joseph-le-Bienveillant
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
+            <Link
+              href="/projet"
+              className="btn-primary text-base px-8 py-3 hover:scale-105 transition-transform duration-200"
             >
-              <div>
-                <div className="text-4xl md:text-5xl font-serif font-bold mb-2">1071</div>
-                <div className="text-sm md:text-base opacity-90">Tuyaux</div>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-serif font-bold mb-2">41</div>
-                <div className="text-sm md:text-base opacity-90">Registres</div>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-serif font-bold mb-2">3</div>
-                <div className="text-sm md:text-base opacity-90">Claviers</div>
-              </div>
-            </motion.div>
+              Découvrir le projet
+            </Link>
+            <Link
+              href="/soutenir"
+              className="btn-secondary bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-accent-blue text-base px-8 py-3 hover:scale-105 transition-transform duration-200"
+            >
+              Nous soutenir
+            </Link>
+          </motion.div>
+
+          {/* Quick stats - Minimalist */}
+          <motion.div
+            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          >
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">1071</div>
+              <div className="text-sm uppercase tracking-wide opacity-80">Tuyaux</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">41</div>
+              <div className="text-sm uppercase tracking-wide opacity-80">Registres</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">3</div>
+              <div className="text-sm uppercase tracking-wide opacity-80">Claviers</div>
+            </div>
           </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <div className="animate-bounce">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </motion.div>
       </section>
 
-      {/* Project Overview */}
-      <section className="py-20 px-4 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-gradient-warm opacity-50" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-wood/10 rounded-full blur-3xl" />
-
-        <div className="container mx-auto relative z-10">
-          <motion.h2
-            className="text-4xl md:text-6xl font-serif text-center mb-6 text-accent-blue"
+      {/* Project Overview - Streamlined */}
+      <section className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Notre Vision
-          </motion.h2>
-          <motion.p
-            className="text-xl text-center mb-16 mx-auto text-gray-700"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Un projet ambitieux alliant tradition et modernité pour créer un patrimoine musical exceptionnel
-          </motion.p>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4 text-accent-blue">
+              Notre Vision
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Un projet ambitieux alliant tradition et modernité
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Card 1: L'Orgue */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <motion.div
-              className="glass-strong rounded-2xl p-8 hover:scale-105 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <Music className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">L&apos;Orgue</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <Music className="w-12 h-12 text-accent-blue mb-4 mx-auto" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">L&apos;Orgue</h3>
+              <p className="text-gray-700 leading-relaxed">
                 Un instrument contemporain avec 1071 tuyaux, 41 registres et 3 claviers manuels.
-                Une palette sonore généreuse et raffinée pour la liturgie et les concerts.
               </p>
             </motion.div>
 
-            {/* Card 2: La Vision */}
             <motion.div
-              className="glass-strong rounded-2xl p-8 hover:scale-105 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Sparkles className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">La Vision</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <Sparkles className="w-12 h-12 text-accent-blue mb-4 mx-auto" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">La Vision</h3>
+              <p className="text-gray-700 leading-relaxed">
                 Créer un orgue unique qui honore la tradition tout en embrassant l&apos;innovation.
-                Un instrument à l&apos;échelle du lieu et de ses ambitions culturelles.
               </p>
             </motion.div>
 
-            {/* Card 3: L'Impact */}
             <motion.div
-              className="glass-strong rounded-2xl p-8 hover:scale-105 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <Theater className="w-16 h-16 text-accent-blue mb-6 mx-auto" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">L&apos;Impact</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                Enrichir la vie culturelle de Voisins-le-Bretonneux par des concerts, festivals et
-                programmes éducatifs. Promouvoir le patrimoine musical auprès de tous.
+              <Theater className="w-12 h-12 text-accent-blue mb-4 mx-auto" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">L&apos;Impact</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Enrichir la vie culturelle par des concerts, festivals et programmes éducatifs.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Donation Progress */}
-      <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-brown opacity-20" />
-        <div className="absolute top-20 left-20 w-96 h-96 bg-accent-burgundy/10 rounded-full blur-3xl" />
-
-        <div className="container mx-auto max-w-7xl relative z-10">
+      {/* Donation Progress - Streamlined */}
+      <section className="py-24 px-4 bg-gradient-warm">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
-            className="glass-strong rounded-3xl p-10 md:p-16 border-2 border-white/30"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-accent-blue">
+            <h2 className="text-4xl md:text-5xl font-serif text-center mb-3 text-accent-blue">
               Progression des dons
             </h2>
-            <p className="text-center text-gray-700 text-xl mb-10">
+            <p className="text-center text-gray-700 text-lg mb-12">
               Aidez-nous à atteindre notre objectif
             </p>
 
             {/* Progress Bar */}
             <div className="mb-8">
-              <div className="bg-white/30 backdrop-blur-sm rounded-full h-8 overflow-hidden border border-white/40">
+              <div className="bg-white/50 rounded-full h-6 overflow-hidden">
                 <motion.div
-                  className="gradient-brown h-full rounded-full flex items-center justify-end pr-6 shadow-lg"
+                  className="bg-accent-blue h-full rounded-full flex items-center justify-end pr-4"
                   initial={{ width: 0 }}
                   whileInView={{ width: '35%' }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1.5, ease: 'easeOut' }}
+                  transition={{ duration: 1.2, ease: 'easeOut' }}
                 >
-                  <span className="text-white text-base font-bold">35%</span>
+                  <span className="text-white text-sm font-semibold">35%</span>
                 </motion.div>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xl font-semibold mb-10">
-              <span className="text-accent-burgundy text-2xl">23 310 € collectés</span>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-10">
+              <span className="text-accent-burgundy text-2xl font-semibold">23 310 € collectés</span>
               <span className="text-gray-600">Objectif à définir</span>
             </div>
 
             <div className="text-center">
-              <Link href="/soutenir" className="btn-primary inline-block text-lg px-12 py-5">
+              <Link href="/soutenir" className="btn-primary inline-block px-8 py-3">
                 Faire un don
               </Link>
             </div>
@@ -222,11 +205,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest News */}
-      <section className="py-20 px-4 bg-cream">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-12 text-accent-blue">
-            Dernières actualités
+      {/* Latest News - Streamlined */}
+      <section className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-accent-blue">
+            Actualités
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* News Article 1 */}
@@ -294,137 +277,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="py-20 px-4 bg-gradient-warm">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-12 text-accent-blue">
+      {/* Upcoming Events - Streamlined */}
+      <section className="py-24 px-4 bg-cream">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-accent-blue">
             Prochains événements
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Event 1 */}
-            <div className="card">
-              <div className="bg-accent-burgundy text-white rounded-lg p-4 mb-4 text-center">
-                <div className="text-3xl font-bold">13</div>
-                <div className="text-sm">JUIN 2025</div>
-              </div>
-              <h3 className="text-xl font-serif mb-2">Concert de l&apos;Orchestre de l&apos;académie de Versailles</h3>
-              <p className="text-gray-600 text-sm mb-2 flex items-center">
-                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
-              </p>
-              <p className="text-gray-700">
-                Un concert exceptionnel avec l&apos;orchestre de l&apos;académie de Versailles.
+            <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="text-accent-burgundy font-serif text-lg mb-3">13 Juin 2025</div>
+              <h3 className="text-xl font-serif mb-2 text-gray-900">
+                Concert de l&apos;Orchestre de l&apos;académie de Versailles
+              </h3>
+              <p className="text-gray-600 text-sm flex items-center">
+                <MapPin className="w-4 h-4 mr-1" /> Église Saint-Joseph
               </p>
             </div>
 
             {/* Event 2 */}
-            <div className="card">
-              <div className="bg-accent-blue text-white rounded-lg p-4 mb-4 text-center">
-                <div className="text-3xl font-bold">09</div>
-                <div className="text-sm">FÉV 2025</div>
-              </div>
-              <h3 className="text-xl font-serif mb-2">Les Petits Chanteurs de la Croix du Bois</h3>
-              <p className="text-gray-600 text-sm mb-2 flex items-center">
-                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
-              </p>
-              <p className="text-gray-700">
-                Concert des célèbres Petits Chanteurs de la Croix du Bois.
+            <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="text-accent-blue font-serif text-lg mb-3">09 Février 2025</div>
+              <h3 className="text-xl font-serif mb-2 text-gray-900">
+                Les Petits Chanteurs de la Croix du Bois
+              </h3>
+              <p className="text-gray-600 text-sm flex items-center">
+                <MapPin className="w-4 h-4 mr-1" /> Église Saint-Joseph
               </p>
             </div>
 
             {/* Event 3 */}
-            <div className="card">
-              <div className="bg-wood text-white rounded-lg p-4 mb-4 text-center">
-                <div className="text-3xl font-bold">18</div>
-                <div className="text-sm">JAN 2025</div>
-              </div>
-              <h3 className="text-xl font-serif mb-2">Choeurs Cadences et Viva Voce</h3>
-              <p className="text-gray-600 text-sm mb-2 flex items-center">
-                <MapPin className="w-4 h-4 mr-1 inline" /> Église Saint-Joseph le Bienveillant
-              </p>
-              <p className="text-gray-700">
-                Concert avec les choeurs Cadences et Viva Voce.
+            <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="text-wood font-serif text-lg mb-3">18 Janvier 2025</div>
+              <h3 className="text-xl font-serif mb-2 text-gray-900">
+                Choeurs Cadences et Viva Voce
+              </h3>
+              <p className="text-gray-600 text-sm flex items-center">
+                <MapPin className="w-4 h-4 mr-1" /> Église Saint-Joseph
               </p>
             </div>
           </div>
           <div className="text-center">
-            <Link href="/concerts" className="text-accent-blue hover:underline font-semibold">
+            <Link href="/concerts" className="text-accent-blue hover:underline font-semibold text-lg">
               Voir tous les événements →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Support Options Preview */}
-      <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-warm opacity-40" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-wood-dark/10 rounded-full blur-3xl" />
-
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <h2 className="text-4xl md:text-6xl font-serif text-center mb-6 text-accent-blue">
+      {/* Support Options - Streamlined */}
+      <section className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-accent-blue">
             Comment nous soutenir
           </h2>
-          <p className="text-center text-gray-700 text-xl mb-16 mx-auto leading-relaxed">
-            Votre soutien est essentiel pour réaliser ce projet exceptionnel.
-            Découvrez les différentes façons de contribuer.
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Votre soutien est essentiel pour réaliser ce projet exceptionnel
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Option 1: Sponsor a pipe */}
-            <motion.div
-              className="glass-strong rounded-2xl p-10 text-center hover:scale-105 transition-all duration-300 border border-white/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <Music className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">Parrainer un tuyau</h3>
-              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Devenez propriétaire d&apos;une partie de l&apos;orgue en parrainant un tuyau,
-                un clavier ou le buffet.
+            <div className="text-center p-8 rounded-lg bg-gradient-warm hover:shadow-lg transition-shadow">
+              <Music className="w-12 h-12 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">Parrainer un tuyau</h3>
+              <p className="text-gray-700 mb-6">
+                Devenez propriétaire d&apos;une partie de l&apos;orgue
               </p>
-              <Link href="/parrainage" className="btn-secondary">
-                En savoir plus
+              <Link href="/parrainage" className="text-accent-blue hover:underline font-semibold">
+                En savoir plus →
               </Link>
-            </motion.div>
+            </div>
 
             {/* Option 2: Make a donation */}
-            <motion.div
-              className="glass-strong rounded-2xl p-10 text-center hover:scale-105 transition-all duration-300 border-2 border-accent-blue/50"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <Heart className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">Faire un don</h3>
-              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Soutenez le projet avec un don libre. Chaque contribution compte et
-                bénéficie d&apos;avantages fiscaux.
+            <div className="text-center p-8 rounded-lg bg-accent-blue/10 hover:shadow-lg transition-shadow border-2 border-accent-blue/30">
+              <Heart className="w-12 h-12 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">Faire un don</h3>
+              <p className="text-gray-700 mb-6">
+                Soutenez le projet avec un don libre
               </p>
-              <Link href="/soutenir" className="btn-primary">
+              <Link href="/soutenir" className="btn-primary inline-block">
                 Faire un don
               </Link>
-            </motion.div>
+            </div>
 
             {/* Option 3: Become a member */}
-            <motion.div
-              className="glass-strong rounded-2xl p-10 text-center hover:scale-105 transition-all duration-300 border border-white/30"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <Users className="w-20 h-20 mx-auto mb-6 text-accent-blue" strokeWidth={1.5} />
-              <h3 className="text-3xl font-serif mb-4 text-accent-blue">Adhérer à l&apos;association</h3>
-              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Rejoignez notre communauté et participez activement à la vie de
-                l&apos;association.
+            <div className="text-center p-8 rounded-lg bg-gradient-warm hover:shadow-lg transition-shadow">
+              <Users className="w-12 h-12 mx-auto mb-4 text-accent-blue" strokeWidth={1.5} />
+              <h3 className="text-2xl font-serif mb-3 text-accent-blue">Adhérer</h3>
+              <p className="text-gray-700 mb-6">
+                Rejoignez notre communauté
               </p>
-              <Link href="/soutenir#adhesion" className="btn-secondary">
-                Adhérer
+              <Link href="/soutenir#adhesion" className="text-accent-blue hover:underline font-semibold">
+                En savoir plus →
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
