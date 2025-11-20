@@ -23,30 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
-      </head>
       <body>
         <Navigation />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", user => {
-                  if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                      document.location.href = "/admin/";
-                    });
-                  }
-                });
-              }
-            `,
-          }}
-        />
       </body>
     </html>
   )

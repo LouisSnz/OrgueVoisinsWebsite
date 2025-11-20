@@ -1,16 +1,17 @@
+# Backend configuration
 backend:
   name: git-gateway
-  branch: main
+  branch: claude/redesign-organ-website-01Dsmyot7uY4oFPhVmBJ5pLt
 
-# Optional: Use local backend for development
+# Enable local backend for testing (run: npx @staticcms/proxy-server)
 local_backend: true
 
-# Media files configuration
+# Media files configuration  
 media_folder: "public/images"
 public_folder: "/images"
 
-# Locales
-locale: 'fr'
+# French locale
+locale: fr
 
 # Collections
 collections:
@@ -57,52 +58,24 @@ collections:
         name: "home"
         file: "content/pages/home.md"
         fields:
-          - {label: "Titre hero", name: "heroTitle", widget: "string"}
-          - {label: "Sous-titre hero", name: "heroSubtitle", widget: "text"}
-          - {label: "Image hero", name: "heroImage", widget: "image"}
-          - {label: "Section Vision - Titre", name: "visionTitle", widget: "string"}
-          - {label: "Section Vision - Texte", name: "visionText", widget: "text"}
-          - label: "Cartes Vision"
-            name: "visionCards"
-            widget: "list"
-            fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Icône", name: "icon", widget: "select", options: ["Music", "Sparkles", "Theater"]}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown"}
 
-      # L'Association page
+      # Association page
       - label: "L'Association"
         name: "association"
         file: "content/pages/association.md"
         fields:
-          - {label: "Mission - Titre", name: "missionTitle", widget: "string"}
-          - {label: "Mission - Texte", name: "missionText", widget: "markdown"}
-          - {label: "Histoire - Titre", name: "historyTitle", widget: "string"}
-          - {label: "Histoire - Texte", name: "historyText", widget: "markdown"}
-          - label: "Équipe"
-            name: "team"
-            widget: "list"
-            fields:
-              - {label: "Nom", name: "name", widget: "string"}
-              - {label: "Rôle", name: "role", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Photo", name: "photo", widget: "image", required: false}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown"}
 
-      # Le Projet page
+      # Project page
       - label: "Le Projet"
         name: "projet"
         file: "content/pages/projet.md"
         fields:
-          - {label: "Description", name: "description", widget: "markdown"}
-          - {label: "Nombre de tuyaux", name: "pipes", widget: "number", default: 1071}
-          - {label: "Nombre de registres", name: "registers", widget: "number", default: 41}
-          - {label: "Nombre de claviers", name: "keyboards", widget: "number", default: 3}
-          - label: "Galerie photos"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Légende", name: "caption", widget: "string"}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown"}
 
   # Settings
   - name: "settings"
@@ -127,6 +100,6 @@ collections:
             name: "donations"
             widget: "object"
             fields:
-              - {label: "Montant collecté", name: "collected", widget: "number"}
-              - {label: "Objectif", name: "goal", widget: "number", required: false}
+              - {label: "Montant collecté (€)", name: "collected", widget: "number"}
+              - {label: "Objectif (€)", name: "goal", widget: "number", required: false}
               - {label: "Afficher l'objectif", name: "showGoal", widget: "boolean", default: false}
