@@ -308,14 +308,14 @@ export default function ContactPage() {
 
       {/* Newsletter */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl font-serif font-bold mb-4 text-accent-blue">
             Newsletter
           </h2>
           <p className="text-gray-700 mb-8">
             Recevez nos actualités et les annonces de nos événements directement dans votre boîte mail.
           </p>
-          <div className="card max-w-md mx-auto">
+          <div className="card max-w-5xl mx-auto">
             <form className="flex flex-col space-y-4">
               <input
                 type="email"

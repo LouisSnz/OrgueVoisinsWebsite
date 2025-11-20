@@ -207,7 +207,7 @@ export default function ConcertsPage() {
 
       {/* Newsletter CTA */}
       <section className="py-16 px-4 bg-gradient-warm">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl font-serif font-bold mb-4 text-accent-blue">
             Restez informé
           </h2>

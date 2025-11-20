@@ -29,7 +29,7 @@ export default function MentionsLegalesPage() {
 
       {/* Content */}
       <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto">
           <div className="space-y-8 text-gray-700 leading-relaxed">
             {/* Éditeur du site */}
             <div>
