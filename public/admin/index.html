@@ -9,5 +9,16 @@
 <body>
   <!-- Include the script that builds the page and powers Static CMS -->
   <script src="https://unpkg.com/@staticcms/app@^4.0.0/dist/static-cms-app.js"></script>
+  <script>
+    // Initialize Static CMS
+    window.CMS_MANUAL_INIT = true;
+
+    // Wait for the CMS to load
+    window.addEventListener('load', function() {
+      if (window.CMS) {
+        window.CMS.init();
+      }
+    });
+  </script>
 </body>
 </html>
