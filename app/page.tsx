@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Music, Sparkles, Theater, TrendingUp, Calendar, Mail, Users, Heart, MapPin } from 'lucide-react';
+import { Music, Sparkles, Theater, Heart, Users, MapPin } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="pt-24">
-      {/* Hero Section - Streamlined */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image with subtle gradient */}
+    <div>
+      {/* Hero Section - New Modern Design */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background image */}
         <Image
           src="/images/orgue_vue_01-2.jpg"
           alt="Grand orgue de l'Église Saint-Joseph-le-Bienveillant"
@@ -19,82 +19,70 @@ export default function Home() {
           priority
           quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
 
-        {/* Hero Content - Clean and Simple */}
-        <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+        {/* Hero Content - Left aligned */}
+        <div className="relative z-10 text-white px-6 md:px-12 lg:px-20 max-w-3xl">
+          {/* Availability indicator */}
+          <motion.div
+            className="flex items-center space-x-2 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <span className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></span>
+            <span className="text-sm md:text-base font-medium tracking-wide">
+              Ouvert aux dons et parrainages
+            </span>
+          </motion.div>
+
+          {/* Main heading - Two lines */}
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif font-semibold mb-6 leading-[1.1]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           >
-            Un orgue exceptionnel pour Voisins-le-Bretonneux
+            Construire un orgue.
+            <br />
+            Créer l&apos;avenir.
           </motion.h1>
 
+          {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-light opacity-95"
+            className="text-lg md:text-xl mb-10 max-w-xl leading-relaxed opacity-90"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            Soutenez la création d&apos;un instrument unique à l&apos;Église Saint-Joseph-le-Bienveillant
+            Un projet ambitieux pour Voisins-le-Bretonneux. Un orgue exceptionnel pour l&apos;Église Saint-Joseph-le-Bienveillant.
           </motion.p>
 
+          {/* CTA Button - Dark style */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
             <Link
-              href="/projet"
-              className="btn-primary text-base px-8 py-3 hover:scale-105 transition-transform duration-200"
-            >
-              Découvrir le projet
-            </Link>
-            <Link
               href="/soutenir"
-              className="btn-secondary bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-accent-blue text-base px-8 py-3 hover:scale-105 transition-transform duration-200"
+              className="inline-block bg-charcoal hover:bg-charcoal/90 text-white font-medium px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Nous soutenir
             </Link>
           </motion.div>
-
-          {/* Quick stats - Minimalist */}
-          <motion.div
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          >
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">1071</div>
-              <div className="text-sm uppercase tracking-wide opacity-80">Tuyaux</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">41</div>
-              <div className="text-sm uppercase tracking-wide opacity-80">Registres</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-serif font-bold mb-1">3</div>
-              <div className="text-sm uppercase tracking-wide opacity-80">Claviers</div>
-            </div>
-          </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Side navigation dots - decorative */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
+          className="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col space-y-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="animate-bounce">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
+          <div className="w-2 h-2 bg-white rounded-full"></div>
+          <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+          <div className="w-2 h-2 bg-white/40 rounded-full"></div>
         </motion.div>
       </section>
 
